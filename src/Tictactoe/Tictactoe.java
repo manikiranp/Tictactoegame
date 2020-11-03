@@ -4,7 +4,8 @@ import java.util.Random;
 import java.util.Scanner;
 
 public class Tictactoe {
-static char[] board = new char[10];  
+static char[] board = new char[10];
+private static String compchoice;  
 public static void main(String args[]) {
 	System.out.println("Welcome to Tictactoe Game---");
 	Board();
@@ -16,18 +17,18 @@ public static void main(String args[]) {
 private static void Inputchoice() {
 	Scanner inp = new Scanner(System.in);
 	System.out.println("Choose 'X' OR 'O' as input: ");
-	String choice = inp.nextLine();
-	Random rand = new Random();
-	int randnum = rand.nextInt(2);
-	System.out.println("Determining between Player or computer");
-	if(randnum==1) {
-		System.out.println("Player inputs:");
+	String playchoice = inp.nextLine();
+	if(playchoice.equals('X' )) {
+			compchoice = "O";
+	}
+	else if(playchoice.equals('O')){
+			compchoice = "X";
 	}
 	else {
-		System.out.println("Computer inputs:");
+		System.out.println("Wrong input");
+		Inputchoice();
 	}
-	
-	
+
 	
 	
 }
