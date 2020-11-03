@@ -9,16 +9,29 @@ private static String compchoice;
 public static void main(String args[]) {
 	System.out.println("Welcome to Tictactoe Game---");
 	Board();
-	Inputchoice();
+//	Inputchoice();
+	ShowBoard();
+	
+}
+
+
+private static void ShowBoard() {
+	System.out.println("_____________");
+	System.out.println("|  "+board[1]+"|  "+board[2]+"|  "+board[3]+"|");
+	System.out.println("_____________");
+	System.out.println("|  "+board[4]+"|  "+board[5]+"|  "+board[6]+"|");
+	System.out.println("_____________");
+	System.out.println("|  "+board[7]+"|  "+board[8]+"|  "+board[9]+"|");
+	System.out.println("_____________");
 	
 }
 
 
 private static void Inputchoice() {
-	Scanner inp = new Scanner(System.in);
+	Scanner UserInput = new Scanner(System.in);
 	System.out.println("Choose 'X' OR 'O' as input: ");
-	String playchoice = inp.nextLine();
-	if(playchoice.equals('X' )) {
+	String playchoice = UserInput.nextLine();
+	if(playchoice.equals('X')) {
 			compchoice = "O";
 	}
 	else if(playchoice.equals('O')){
@@ -29,7 +42,6 @@ private static void Inputchoice() {
 		Inputchoice();
 	}
 
-	
 	
 }
 
